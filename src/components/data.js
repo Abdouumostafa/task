@@ -62,33 +62,6 @@ export const types2 = [
   },
 ];
 
-export const numsTypes = [
-  {
-    id: nanoid(),
-    title: "شكاوى جديدة",
-    num: 150,
-    bgColor: "FDBE7B",
-  },
-  {
-    id: nanoid(),
-    title: "شكاوى تم اعتمادها",
-    num: 150,
-    bgColor: "12AA77",
-  },
-  {
-    id: nanoid(),
-    title: "الشكاوى المرفوضة",
-    num: 44,
-    bgColor: "FF6A6F",
-  },
-  {
-    id: nanoid(),
-    title: "الشكاوى المقبولة",
-    num: 44,
-    bgColor: "43A7D8",
-  },
-];
-
 export const newComplaints = [
   {
     id: nanoid(),
