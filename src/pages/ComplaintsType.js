@@ -16,7 +16,7 @@ const ComplaintsType = () => {
         <h1 className="text-[32px] mb-8">اختر نوع الشكوى</h1>
         <div className="flex flex-wrap items-center gap-10 justify-center lg:w-[1000px] w-full">
           {types.map((type) => {
-            const { id, img, title } = type;
+            const { id, img, secImg, title } = type;
             return (
               <div
                 id={id}
@@ -24,11 +24,16 @@ const ComplaintsType = () => {
                 key={id}
                 className={
                   id === activeBtn
-                    ? "active rounded border border-[#8C8C8C] h-[120px] w-[150px] py-4 px-6 cursor-pointer hover:bg-[#33835C] hover:text-white"
-                    : "rounded border border-[#8C8C8C] h-[120px] w-[150px] py-4 px-6 cursor-pointer hover:bg-[#33835C] hover:text-white"
+                    ? "active rounded border border-[#8C8C8C] h-[120px] w-[150px] py-4 px-6 cursor-pointer "
+                    : "rounded border border-[#8C8C8C] h-[120px] w-[150px] py-4 px-6 cursor-pointer"
                 }
               >
-                <img id={id} src={img} alt="img" className="mx-auto mb-4 " />
+                <img
+                  id={id}
+                  src={id === activeBtn ? secImg : img}
+                  alt="img"
+                  className="mx-auto mb-4 "
+                />
                 <p id={id} className="text-center">
                   {title}
                 </p>
@@ -36,18 +41,23 @@ const ComplaintsType = () => {
             );
           })}
           {types2.map((type) => {
-            const { id, img, title } = type;
+            const { id, img, secImg, title } = type;
             return (
               <div
                 onClick={() => handleClick(id)}
                 key={id}
                 className={
                   id === activeBtn
-                    ? "active rounded border border-[#8C8C8C] h-[120px] w-[150px] py-4 px-6 cursor-pointer hover:bg-[#33835C] hover:text-white"
-                    : "rounded border border-[#8C8C8C] h-[120px] w-[150px] py-4 px-6 cursor-pointer hover:bg-[#33835C] hover:text-white"
+                    ? "active rounded border border-[#8C8C8C] h-[120px] w-[150px] py-4 px-6 cursor-pointer "
+                    : "rounded border border-[#8C8C8C] h-[120px] w-[150px] py-4 px-6 cursor-pointer "
                 }
               >
-                <img id={id} src={img} alt="img" className="mx-auto mb-4 " />
+                <img
+                  id={id}
+                  src={id === activeBtn ? secImg : img}
+                  alt="img"
+                  className="mx-auto mb-4 "
+                />
                 <p id={id} className="text-center">
                   {title}
                 </p>
