@@ -7,18 +7,30 @@ const ControlComplaints = () => {
     <>
       <ControlNav />
       <div className="flex mt-10 text-center justify-center items-center gap-6 flex-wrap mx-6">
-        {numsTypes.map((element) => {
-          const { id, title, num, bgColor } = element;
-          return (
-            <div
-              key={id}
-              className={`min-h-[110px] min-w-[275px] text-white rounded-[14px] py-[20px] px-[50px] bg-[#${bgColor}]`}
-            >
-              <p className="text-[20px]">{title}</p>
-              <p className="text-[24px] font-bold">{num}</p>
-            </div>
-          );
-        })}
+        <div
+          className={`min-h-[110px] min-w-[275px] text-white rounded-[14px] py-[20px] px-[50px] bg-[#FDBE7B]`}
+        >
+          <p className="text-[20px]">شكاوى جديدة</p>
+          <p className="text-[24px] font-bold">150</p>
+        </div>
+        <div
+          className={`min-h-[110px] min-w-[275px] text-white rounded-[14px] py-[20px] px-[50px] bg-[#12AA77]`}
+        >
+          <p className="text-[20px]">شكاوى تم اعتمادها</p>
+          <p className="text-[24px] font-bold">150</p>
+        </div>
+        <div
+          className={`min-h-[110px] min-w-[275px] text-white rounded-[14px] py-[20px] px-[50px] bg-[#FF6A6F]`}
+        >
+          <p className="text-[20px]"> الشكاوى المرفوضة</p>
+          <p className="text-[24px] font-bold">44</p>
+        </div>
+        <div
+          className={`min-h-[110px] min-w-[275px] text-white rounded-[14px] py-[20px] px-[50px] bg-[#43A7D8]`}
+        >
+          <p className="text-[20px]">الشكاوى المقبولة</p>
+          <p className="text-[24px] font-bold">44</p>
+        </div>
       </div>
       <div className="w-full flex flex-wrap items-center justify-center m-auto gap-10 mt-10">
         <h2 className=" text-[26px] w-[260px]">الشكاوى الجديدة</h2>
